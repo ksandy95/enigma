@@ -33,13 +33,18 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_encryption_with_todays_date
-    encrypted = @enigma.encrypt("hello world", "02715")
+    actual = @enigma.encrypt("hello world", "02715")
     expected = {
       encryption: "",
-      date: ""
-    }
-    assert_equal expected, encrypted
+      date: "" }
+    assert_equal expected, actual
   end
 
-
+  def test_decryption_with_todays_date
+    actual = @enigma.decrypt(encrypted[:encryption], "02715")
+    expected = {
+      decryption: "",
+      date: "" }
+    assert_equal expected, actual
+  end
 end
