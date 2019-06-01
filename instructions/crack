@@ -1,0 +1,62 @@
+Cracking
+The following is only required for scoring a 4 on functionality
+
+Enigma#crack(ciphertext, date)
+The crack method decrypts a message without being given the key.
+This method can optionally take a date to use for cracking as a second argument.
+If no date is given, it should use today’s date for cracking.
+It should output a hash containing the decrypted message,
+the date used for encryption in the form of DDMMYY, and the Key used for encryption.
+
+We believe that each enemy message ends with the characters " end".
+Use this to crack the encryption.
+
+The Enigma class should now respond to the following interaction pattern:
+pry(main)> require 'date'
+#=> true
+
+pry(main)> require './lib/enigma'
+#=> true
+
+pry(main)> enigma = Enigma.new
+#=> #<Enigma:0x00007ff90f24cb78...>
+
+pry(main)> enigma.encrypt("hello world end", "08304", "291018")
+#=>
+#   {
+#     encryption: "vjqtbeaweqihssi",
+#     key: "08304",
+#     date: "291018"
+#   }
+
+# crack an encryption with a date
+pry(main)> enigma.crack("vjqtbeaweqihssi", "291018")
+#=>
+#   {
+#     decryption: "hello world end",
+#     date: "291018",
+#     key: "08304"
+#   }
+
+# crack an encryption (uses today's date)
+pry(main)> enigma.crack("vjqtbeaweqihssi")
+#=>
+#   {
+#     decryption: "hello world end",
+#     date: # todays date in the format DDMMYY,
+#     key: # key used for encryption
+#   }
+
+Cracking Interface
+Additionally, create a Runner file called crack.rb that takes three command
+line arguments. The first is an existing file that contains an encrypted message.
+The second is a file where your program should write the cracked message.
+The third is the date to be used for cracking.
+In addition to writing the cracked message to the file,
+your program should output to the screen the file it wrote to,
+the key used for cracking, and the date used for cracking:
+
+$ ruby ./lib/encrypt.rb message.txt encrypted.txt
+Created 'encrypted.txt' with the key 82648 and date 240818
+$ ruby ./lib/crack.rb encrypted.txt cracked.txt 240818
+Created 'cracked.txt' with the cracked key 82648 and date 240818
