@@ -30,11 +30,4 @@ class KeyTest < Minitest::Test
     assert_equal [], @key_1.key_grouping
   end
 
-  def test_key_assignment
-    assert_equal [0], @key_1.a
-    assert_equal [], @key_1.b
-    assert_equal [], @key_1.c
-    assert_equal [], @key_1.d
-  end
-
 end
