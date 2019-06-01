@@ -12,6 +12,7 @@ The encrypt method returns a hash with three keys:
 :encryption => the encrypted String
 :key => the key used for encryption as a String
 :date => the date used for encryption as a String in the form DDMMYY
+
 Enigma#decrypt(ciphertext, key, date)
 The decrypt method takes a ciphertext String and the Key used
 for encryption as arguments. The decrypt method can optionally take a date
@@ -23,6 +24,7 @@ The decrypt method returns a hash with three keys:
 :decryption => the decrypted String
 :key => the key used for decryption as a String
 :date => the date used for decryption as a String in the form DDMMYY
+
 Interaction Pattern
 The Enigma class should respond to the following interaction pattern:
 
