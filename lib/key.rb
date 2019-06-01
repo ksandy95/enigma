@@ -2,12 +2,7 @@ require 'pry'
 
 class Key
 
-  attr_reader :a, :b, :c, :d
   def initialize
-    @a = []
-    @b = []
-    @c = []
-    @d = []
     @random_keys = []
     @key_group = []
   end
@@ -21,10 +16,6 @@ class Key
     random_num.each_cons(2){ |num| @key_group << num }
     @key_group.map { |arr| arr.join.to_i }
     @key_group
-  end
-
-  def key_assignment
-  
   end
 
 end
