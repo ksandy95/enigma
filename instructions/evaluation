@@ -1,0 +1,18 @@
+Goals
+
+Cracking method and command line interface successfully implemented
+
+Project includes a module and/or superclass that could be used outside
+of the Enigma project. All methods are less than 8 lines of code, all classes
+are less than 100 lines, and all lines of code are less than 80 characters.
+At least one class demonstrates a good use of class methods.
+Variable and method names always clearly communicate purpose.
+
+All test names clearly communicate the purpose of the test.
+At least one test implements mocks and stubs.
+Test coverage metrics show 100% coverage
+
+At least 40 commits. At least 15 pull requests that are named and documented
+to clearly communicate the purpose of the pull request.
+No commits include multiple pieces of functionality.
+No commit message is ambiguous.
