@@ -22,4 +22,8 @@ class KeyTest < Minitest::Test
     assert_equal [], @key_1.d
   end
 
+  def test_can_create_random_number_array
+    assert_equal [], @key_1.random_numbers
+  end
+
 end
