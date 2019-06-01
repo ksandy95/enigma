@@ -7,5 +7,8 @@ require 'date'
 
 class KeyTest < Minitest::Test
 
+  def setup
+    @key_1 = Key.new
+  end
 
 end
