@@ -15,36 +15,40 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_encripts
-    actual = @enigma.encrypt("hello world", "02715", "040895")
     expected = {
       encryption: "keder ohulw",
       key: "02715",
       date: "040895" }
-    assert_equal expected, actual
+    assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
   end
 
   def test_it_decrypts
-    actual = @enigma.decrypt("keder ohulw", "02715", "040895")
     expected = {
       decryption: "hello world",
       key: "02715",
       date: "040895" }
-    assert_equal expected, actual
+    assert_equal expected, @enigma.decrypt("keder ohulw", "02715", "040895")
   end
 
   def test_encryption_with_todays_date
-    actual = @enigma.encrypt("hello world", "02715")
     expected = {
       encryption: "",
       date: "" }
-    assert_equal expected, actual
+    assert_equal expected, @enigma.encrypt("hello world", "02715")
   end
 
   def test_decryption_with_todays_date
-    actual = @enigma.decrypt(encrypted[:encryption], "02715")
     expected = {
       decryption: "",
       date: "" }
-    assert_equal expected, actual
+    assert_equal expected, @enigma.decrypt(encrypted[:encryption], "02715")
+  end
+
+  def test_encryption_with_todays_date_and_random_key
+    expected = {
+      encryption: "",
+      key: "",
+      date: "" }
+    assert_equal expected, @enigma.encrypt("hello world")
   end
 end
