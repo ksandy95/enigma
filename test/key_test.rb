@@ -23,18 +23,11 @@ class KeyTest < Minitest::Test
   end
 
   def test_can_create_random_number_array
-    assert_equal [], @key_1.random_numbers
+    assert_equal [], @key_1.random_num
   end
 
   def test_key_digit_creation
     assert_equal [], @key_1.key_grouping
-  end
-
-  def test_key_assignment
-    assert_equal [], @key_1.a
-    assert_equal [], @key_1.b
-    assert_equal [], @key_1.c
-    assert_equal [], @key_1.d
   end
 
 end
