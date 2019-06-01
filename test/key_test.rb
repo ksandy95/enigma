@@ -11,4 +11,8 @@ class KeyTest < Minitest::Test
     @key_1 = Key.new
   end
 
+  def test_it_exists
+    assert_instance_of Key, @key_1
+  end
+
 end
