@@ -14,7 +14,6 @@ class Key
   def random_numbers
     5.times { @random_keys << rand(0..9)}
     @random_keys
-
   end
 
   def key_grouping
