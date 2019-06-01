@@ -32,4 +32,14 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_encryption_with_todays_date
+    encrypted = @enigma.encrypt("hello world", "02715")
+    expected = {
+      encryption: "",
+      date: ""
+    }
+    assert_equal expected, encrypted
+  end
+
+
 end
