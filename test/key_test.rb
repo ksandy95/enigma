@@ -26,4 +26,8 @@ class KeyTest < Minitest::Test
     assert_equal [], @key_1.random_numbers
   end
 
+  def test_key_digit_creation
+    assert_equal [], @key_1.key_grouping
+  end
+
 end
