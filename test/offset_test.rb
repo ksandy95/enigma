@@ -15,7 +15,7 @@ class OffsetTest < Minitest::Test
   end
 
   def test_it_has_date
-
+    assert_equal Today, @offset.date
   end
 
   def test_date_numeric_square
