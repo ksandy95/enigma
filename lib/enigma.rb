@@ -4,10 +4,11 @@ class Enigma
 
 
   def initialize(argument)
-    @argument = argument
+    @key = key
+    @date = date
   end
 
-  def encrypt
+  def encrypt("")
     # The encrypt method takes a message String as an argument.
     # It can optionally take a Key and Date as arguments to use for encryption.
     # If the key is not included, generate a random key.
