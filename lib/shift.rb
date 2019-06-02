@@ -34,4 +34,5 @@ class Shift
     # the index position is summed with the offset total to get the new index position.
     # at the beginning to the string, the first character is shifted by the
     # value of @letters[:a] to correspond to the range.
+  end
 end
