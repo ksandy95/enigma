@@ -4,6 +4,7 @@ require 'Minitest/autorun'
 require './lib/offset'
 require './lib/key'
 
+
 class OffsetTest < Minitest::Test
 
   def setup
