@@ -8,7 +8,7 @@ require './lib/key'
 class OffsetTest < Minitest::Test
 
   def setup
-    @offset = Offset.new
+    @offset = Offset.new()
     @key_1 = Key.new
   end
 
@@ -17,11 +17,11 @@ class OffsetTest < Minitest::Test
   end
 
   def test_date_is_today
-    assert_equal Time.now.strftime("%m%d%y"), @offset.date
+    assert_equal Time.now.strftime("%m%d%y"), @offset.date_1
   end
 
   def test_numeric_date
-    assert_equal @offset.date.to_i, @offset.numeric_date
+    assert_equal @offset.date_1.to_i, @offset.numeric_date
   end
 
   def test_date_numeric_square
