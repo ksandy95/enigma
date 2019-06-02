@@ -1,22 +1,31 @@
 require 'pry'
+require './lib/offset'
 
 class Shift
 
   def initialize
-    @letters = {}
-    @key = Key.new
-    @offset = Offset.new
-    @range = (("a".."z").to_a << " ") * 5
+    @range = ("a".."z").to_a << " "
+    @offset = Offset.new(date)
+    @key = Key.new(key)
   end
 
-  def letter_divide
-    @letters[:a] = @offset.offset_total[0]
-    @letters[:b] = @offset.offset_total[1]
-    @letters[:c] = @offset.offset_total[2]
-    @letters[:d] = @offset.offset_total[3]
-    @letters
+  def shift_total
+    a = []
+    a << @key.key_grouping
+    a << last_four
+    a.transpose.map {|x| x.reduce(:+)}
   end
 
+  def shift_rotation
+    shift = offset_total.first
+    offset_total.rotate!
+    shift
+  end
+
+  def character_shift
+    message.downcase.each_char { |character|
+    @range.find(charater)}
+  end
   # message.each_char { |x| conditional for abcd offsets }
 
   def character_loop
