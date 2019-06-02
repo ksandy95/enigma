@@ -2,7 +2,7 @@ require 'pry'
 
 class Key
 
-  def initialize
+  def initialize(key = random_num)
     @random_keys = []
     @key_group = []
   end
