@@ -15,20 +15,24 @@ class OffsetTest < Minitest::Test
     assert_instance_of Offset, @offset
   end
 
+  def test_date_is_today
+    assert_equal Time.now.strftime("%m%d%y"), @offset.date
+  end
+
   def test_numeric_date
-    assert_equal 60119, @offset.numeric_date
+    assert_equal @offset.date.to_i, @offset.numeric_date
   end
 
   def test_date_numeric_square
-    assert_equal 3614294161, @offset.square_date
+    assert_equal @offset.numeric_date * @offset.numeric_date, @offset.square_date
   end
 
   def test_last_four
-    assert_equal [4, 1, 6, 1], @offset.last_four
+    assert_equal 4, @offset.last_four.count
   end
 
   def test_offset_total
-    assert_equal [], @offset.offset_total
+    assert_equal 4, @offset.offset_total.count
   end
 
 end
