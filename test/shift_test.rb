@@ -10,6 +10,11 @@ class ShiftTest < Minitest::Test
   def setup
     @offset = Offset.new
     @key = Key.new
+    @shift = Shift.new
+  end
+
+  def test_it_exists
+    assert_equal Shift, @shift
   end
 
 end
