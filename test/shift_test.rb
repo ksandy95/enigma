@@ -8,9 +8,8 @@ require './lib/shift'
 class ShiftTest < Minitest::Test
 
   def setup
-    @offset = Offset.new("040895", "02715")
-    # @key = Key.new
-    # @shift = Shift.new
+    @offset = Offset.new("040895")
+    @shift = Shift.new
     @message_example = "Hello World!"
   end
 
