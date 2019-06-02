@@ -2,20 +2,16 @@ require 'pry'
 
 class Key
 
-  def initialize(key = random_num)
-    @random_keys = []
+  attr_reader :key
+  def initialize(key = rand(1..99999).to_s.rjust(5,'0'))
+    @key = key
     @key_group = []
   end
 
-  def random_num
-    5.times { @random_keys << rand(0..9)}
-    @random_keys
-  end
-
   def key_grouping
-    random_num.each_cons(2){ |num| @key_group << num }
-    a = @key_group.map { |arr| arr.join.to_i }
-    a
+    key.split(//).to_a.each_cons(2){ |num| @key_group << num }
+    group_of_keys = @key_group.map { |arr| arr.join.to_i }
+    group_of_keys
   end
 
 end
