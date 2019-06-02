@@ -6,7 +6,7 @@ class Shift
     @letters = {}
     @key = Key.new
     @offset = Offset.new
-    @range = (("a".."z").to_a << " ") * 8
+    @range = (("a".."z").to_a << " ") * 5
   end
 
   def letter_divide
@@ -17,6 +17,12 @@ class Shift
     @letters
   end
 
+  # message.each_char { |x| conditional for abcd offsets }
 
-
+  def character_loop
+    #at the start of the string, for every character, downcase.
+    # the characters start out at the beginning of the range and when shifted
+    # the index position is summed with the offset total to get the new index position.
+    # at the beginning to the string, the first character is shifted by the
+    # value of @letters[:a] to correspond to the range.
 end
