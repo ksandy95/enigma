@@ -6,6 +6,7 @@ class Shift
     @letters = {}
     @key = Key.new
     @offset = Offset.new
+    @range = (("a".."z").to_a << " ") * 8
   end
 
   def letter_divide
@@ -15,5 +16,7 @@ class Shift
     @letters[:d] = @offset.offset_total[3]
     @letters
   end
+
+
 
 end
