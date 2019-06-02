@@ -6,9 +6,12 @@ class Offset
     @key = Key.new
   end
 
+  def date
+    Time.now.strftime("%m%d%y")
+  end
+
   def numeric_date
-    a = Time.now.strftime("%m%d%y")
-    a.to_i
+    date.to_i
   end
 
   def square_date
