@@ -14,8 +14,8 @@ class Key
 
   def key_grouping
     random_num.each_cons(2){ |num| @key_group << num }
-    @key_group.map { |arr| arr.join.to_i }
-    @key_group
+    a = @key_group.map { |arr| arr.join.to_i }
+    a
   end
 
 end
