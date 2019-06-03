@@ -9,7 +9,6 @@ class ShiftTest < Minitest::Test
 
   def setup
     @shift = Shift.new("02715", "040895")
-    @message_example = "Hello World!"
   end
 
   def test_it_exists
@@ -24,4 +23,7 @@ class ShiftTest < Minitest::Test
     assert_equal 3, @shift.shift_rotation
   end
 
+  def test_character_shift
+    assert_equal "keder ohulw!", @shift.character_shift("Hello World!")
+  end
 end
