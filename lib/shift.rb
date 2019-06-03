@@ -3,7 +3,8 @@ require './lib/offset'
 
 class Shift
 
-  def initialize(key, date)
+  attr_reader :key, :date
+  def initialize(key = Key.new.key, date = Time.now.strftime("%d%m%y"))
     @range = ("a".."z").to_a << " "
     @offset = Offset.new(date)
     @key = Key.new(key)
