@@ -3,10 +3,10 @@ Goals for well above expectations
 Cracking method and command line interface successfully implemented
 Project includes a module and/or superclass that could be used outside of the Enigma project.
 At least one class demonstrates a good use of class methods.
-At least 15 pull requests that are named and documented to clearly communicate the purpose of the pull request. (13 / 15)
-No commits include multiple pieces of functionality.
-No commit message is ambiguous.
+At least 15 pull requests that are named and documented to clearly communicate the purpose of the pull request. (14 / 15)
 ================================================================================
+No commits include multiple pieces of functionality.(SRP)
+No commit message is ambiguous. (yes!)
 At least one test implements mocks and stubs.(yes!)
 At least 40 commits.(done)
 All methods are less than 8 lines of code, (done, yes)

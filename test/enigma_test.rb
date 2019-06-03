@@ -20,7 +20,6 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_decrypts
-    skip
     expected = {
       decryption: "hello world",
       key: "02715",
@@ -37,12 +36,13 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_decryption_with_todays_date
-    skip
-    expected = {
-      decryption: "",
-      key: "02715",
-      date: Time.now.strftime("%d%m%y")}
-    assert_equal expected, @enigma.decrypt(encrypted[:encryption], "02715")
+    Offset.stub_any_instance :date, Offset.new.date do
+      expected = {
+        decryption: "hello world",
+        key: "01135",
+        date: Offset.new.date}
+      assert_equal expected, @enigma.decrypt("lqdusloxvxw", "01135")
+    end
   end
 
   def test_encryption_with_todays_date_and_random_key
