@@ -1,10 +1,10 @@
 require_relative 'test_helper'
 
-
 class EnigmaTest < Minitest::Test
 
   def setup
     @enigma = Enigma.new
+    @key = Key.new
   end
 
   def test_it_exists
@@ -46,11 +46,12 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_encryption_with_todays_date_and_random_key
-    skip
-    expected = {
-      encryption: "",
-      key: key,
-      date: Time.now.strftime("%d%m%y")}
-    assert_equal expected, @enigma.encrypt("hello world")
+      Key.stub_any_instance :key, "01135" do
+      expected = {
+        encryption: "lqdusloxvxw",
+        key: "01135",
+        date: Time.now.strftime("%d%m%y")}
+      assert_equal expected, @enigma.encrypt("hello world")
+    end
   end
 end
