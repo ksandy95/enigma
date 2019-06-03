@@ -3,8 +3,8 @@ Goals for well above expectations
 Cracking method and command line interface successfully implemented
 Project includes a module and/or superclass that could be used outside of the Enigma project.
 At least one class demonstrates a good use of class methods.
-At least 15 pull requests that are named and documented to clearly communicate the purpose of the pull request. (14 / 15)
 ================================================================================
+At least 15 pull requests that are named and documented to clearly communicate the purpose of the pull request. (15 / 15)
 No commits include multiple pieces of functionality.(SRP)
 No commit message is ambiguous. (yes!)
 At least one test implements mocks and stubs.(yes!)
@@ -19,10 +19,9 @@ All test names clearly communicate the purpose of the test. (all tests are aptly
 ================================================================================
 Requirements for meets expectations
 
-Enigma Class with encrypt and decrypt methods successfully implemented.
 Encrypt/decrypt command line interfaces successfully implemented
-
 ================================================================================
+Enigma Class with encrypt and decrypt methods successfully implemented. (yes!)
 Project is broken into logical components consisting of at least 4 classes that have single responsibilities. (yes)
 No more than 2 methods are longer than 7 lines. (yes)
 No class is longer than 100 lines. (yes)
@@ -33,5 +32,4 @@ Test coverage metrics show coverage at 99% or greater. (yes)
 At least 30 commits. (yes)
 At least 10 pull requests. (yes)
 No more than 3 commits include multiple pieces of functionality. (yes)
-
 ================================================================================
