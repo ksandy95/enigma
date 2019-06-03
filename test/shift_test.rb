@@ -8,13 +8,11 @@ require './lib/shift'
 class ShiftTest < Minitest::Test
 
   def setup
-    @offset = Offset.new("040895")
-    @shift = Shift.new
-    @message_example = "Hello World!"
+    @shift = Shift.new("02715", "040895")
   end
 
   def test_it_exists
-    assert_equal Shift, @shift
+    assert_instance_of Shift, @shift
   end
 
   def test_shift_rotation
@@ -25,4 +23,7 @@ class ShiftTest < Minitest::Test
     assert_equal 3, @shift.shift_rotation
   end
 
+  def test_character_shift
+    assert_equal "keder ohulw!", @shift.character_shift("Hello World!")
+  end
 end

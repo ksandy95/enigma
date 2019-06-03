@@ -12,7 +12,8 @@ All test names clearly communicate the purpose of the test.
 At least one test implements mocks and stubs.
 Test coverage metrics show 100% coverage
 
-At least 40 commits. At least 15 pull requests that are named and documented
+At least 40 commits.(done)
+ At least 15 pull requests that are named and documented
 to clearly communicate the purpose of the pull request.
 No commits include multiple pieces of functionality.
 No commit message is ambiguous.

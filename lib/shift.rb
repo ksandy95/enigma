@@ -3,36 +3,32 @@ require './lib/offset'
 
 class Shift
 
-  def initialize
+  def initialize(key, date)
     @range = ("a".."z").to_a << " "
     @offset = Offset.new(date)
     @key = Key.new(key)
+    @shifts = shift_total
   end
 
   def shift_total
-    a = []
-    a << @key.key_grouping
-    a << last_four
-    a.transpose.map {|x| x.reduce(:+)}
+    final_array = []
+    final_array << @key.key_grouping
+    final_array << @offset.last_four
+    final_array.transpose.map {|num| num.reduce(:+)}
   end
 
   def shift_rotation
-    shift = offset_total.first
-    offset_total.rotate!
+    shift = @shifts.first
+    @shifts.rotate!
     shift
   end
 
-  def character_shift
-    message.downcase.each_char { |character|
-    @range.find(charater)}
+  def character_shift(message)
+    message.downcase.chars.map do |character|
+      next character if !@range.include?(character)
+      index = @range.find_index(character)
+      @range.rotate(index + shift_rotation).first
+    end.join
   end
-  # message.each_char { |x| conditional for abcd offsets }
 
-  def character_loop
-    #at the start of the string, for every character, downcase.
-    # the characters start out at the beginning of the range and when shifted
-    # the index position is summed with the offset total to get the new index position.
-    # at the beginning to the string, the first character is shifted by the
-    # value of @letters[:a] to correspond to the range.
-  end
 end
