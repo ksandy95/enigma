@@ -32,4 +32,11 @@ class Shift
     end.join
   end
 
+  def reverse_shift(message)
+    message.downcase.chars.map do |character|
+      next character if !@range.include?(character)
+      index = @range.find_index(character)
+      @range.rotate(index - shift_rotation).first
+    end.join
+  end
 end
