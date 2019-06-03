@@ -1,9 +1,4 @@
-require 'pry'
-require 'Minitest/pride'
-require 'Minitest/autorun'
-require './lib/offset'
-require './lib/key'
-require './lib/shift'
+require_relative 'test_helper'
 
 class ShiftTest < Minitest::Test
 

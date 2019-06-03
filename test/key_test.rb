@@ -1,7 +1,4 @@
-require 'pry'
-require 'Minitest/pride'
-require 'Minitest/autorun'
-require './lib/key'
+require_relative 'test_helper'
 
 class KeyTest < Minitest::Test
 
