@@ -2,7 +2,9 @@ require 'pry'
 require 'Minitest/pride'
 require 'Minitest/autorun'
 require './lib/enigma'
-require 'date'
+require './lib/offset'
+require './lib/key'
+require './lib/shift'
 
 class EnigmaTest < Minitest::Test
 
