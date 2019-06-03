@@ -1,8 +1,5 @@
-require 'pry'
-require 'Minitest/pride'
-require 'Minitest/autorun'
-require './lib/enigma'
-require 'date'
+require_relative 'test_helper'
+
 
 class EnigmaTest < Minitest::Test
 
@@ -23,6 +20,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_decrypts
+    skip
     expected = {
       decryption: "hello world",
       key: "02715",
@@ -32,23 +30,27 @@ class EnigmaTest < Minitest::Test
 
   def test_encryption_with_todays_date
     expected = {
-      encryption: "",
-      date: "" }
+      encryption: "mfhatasdwm ",
+      key: "02715",
+      date: Time.now.strftime("%d%m%y")}
     assert_equal expected, @enigma.encrypt("hello world", "02715")
   end
 
   def test_decryption_with_todays_date
+    skip
     expected = {
       decryption: "",
-      date: "" }
+      key: "02715",
+      date: Time.now.strftime("%d%m%y")}
     assert_equal expected, @enigma.decrypt(encrypted[:encryption], "02715")
   end
 
   def test_encryption_with_todays_date_and_random_key
+    skip
     expected = {
       encryption: "",
-      key: "",
-      date: "" }
+      key: key,
+      date: Time.now.strftime("%d%m%y")}
     assert_equal expected, @enigma.encrypt("hello world")
   end
 end
