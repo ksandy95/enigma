@@ -3,22 +3,23 @@ require './lib/offset'
 
 class Shift
 
-  def initialize
+  def initialize(key, date)
     @range = ("a".."z").to_a << " "
     @offset = Offset.new(date)
     @key = Key.new(key)
+    @shifts = shift_total
   end
 
   def shift_total
-    a = []
-    a << @key.key_grouping
-    a << last_four
-    a.transpose.map {|x| x.reduce(:+)}
+    final_array = []
+    final_array << @key.key_grouping
+    final_array << @offset.last_four
+    final_array.transpose.map {|num| num.reduce(:+)}
   end
 
   def shift_rotation
-    shift = offset_total.first
-    offset_total.rotate!
+    shift = @shifts.first
+    @shifts.rotate!
     shift
   end
 
