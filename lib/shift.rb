@@ -3,7 +3,8 @@ require './lib/offset'
 
 class Shift
 
-  def initialize(key, date)
+  attr_reader :key, :date
+  def initialize(key = Key.new.key, date = Time.now.strftime("%d%m%y"))
     @range = ("a".."z").to_a << " "
     @offset = Offset.new(date)
     @key = Key.new(key)
@@ -11,10 +12,10 @@ class Shift
   end
 
   def shift_total
-    final_array = []
-    final_array << @key.key_grouping
-    final_array << @offset.last_four
-    final_array.transpose.map {|num| num.reduce(:+)}
+    shift_array = []
+    shift_array << @key.key_grouping
+    shift_array << @offset.last_four
+    shift_array.transpose.map {|num| num.reduce(:+)}
   end
 
   def shift_rotation

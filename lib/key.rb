@@ -10,8 +10,7 @@ class Key
 
   def key_grouping
     key.split(//).to_a.each_cons(2){ |num| @key_group << num }
-    group_of_keys = @key_group.map { |arr| arr.join.to_i }
-    group_of_keys
+    @key_group.map { |arr| arr.join.to_i }
   end
 
 end

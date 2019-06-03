@@ -22,7 +22,7 @@ class OffsetTest < Minitest::Test
     assert_equal @offset_1.numeric_date * @offset_1.numeric_date, @offset_1.square_date
   end
 
-  def test_last_four
+  def test_last_four_numbers_given_as_array
     expected = [1,0,2,5]
     assert_equal expected, @offset.last_four
     assert_equal 4, @offset_1.last_four.count
