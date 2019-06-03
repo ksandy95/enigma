@@ -12,10 +12,10 @@ class Shift
   end
 
   def shift_total
-    final_array = []
-    final_array << @key.key_grouping
-    final_array << @offset.last_four
-    final_array.transpose.map {|num| num.reduce(:+)}
+    shift_array = []
+    shift_array << @key.key_grouping
+    shift_array << @offset.last_four
+    shift_array.transpose.map {|num| num.reduce(:+)}
   end
 
   def shift_rotation
