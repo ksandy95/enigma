@@ -17,10 +17,9 @@ Test coverage metrics show 100% coverage (rake is at 100%)
 All test names clearly communicate the purpose of the test. (all tests are aptly named)
 
 ================================================================================
-Requirements for meets expectations
+Requirements for meets expectations ( All met )
 
-Encrypt/decrypt command line interfaces successfully implemented
-================================================================================
+Encrypt/decrypt command line interfaces successfully implemented (yes)
 Enigma Class with encrypt and decrypt methods successfully implemented. (yes!)
 Project is broken into logical components consisting of at least 4 classes that have single responsibilities. (yes)
 No more than 2 methods are longer than 7 lines. (yes)
