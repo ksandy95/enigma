@@ -16,6 +16,10 @@ class OffsetTest < Minitest::Test
     assert_equal Time.now.strftime("%d%m%y"), @offset_1.date
   end
 
+  def test_numeric_date
+    assert_equal 40895, @offset.numeric_date
+  end
+
   def test_date_numeric_square
     assert_equal 1672401025, @offset.square_date
     assert_equal @offset_1.numeric_date * @offset_1.numeric_date, @offset_1.square_date
