@@ -1,11 +1,3 @@
-Please make sure that your project uses SimpleCov.
-You should be able to demonstrate in you evaluation that SimpleCov
-reports accurate test coverage statistics at 95% coverage or above.
-
-Create your own Github repository for hosting your project.
-You do not need to fork anything.
-Make sure that you are working on branches, using pull requests,
-and committing frequently in small chunks of functionality.
 
 Add a command line interface for encryption and decryption.
 You should create a Runner file called encrypt.rb that takes two command line

@@ -12,4 +12,12 @@ class Enigma
     {decryption: shift.reverse_shift(message), key: key, date: date }
   end
 
+  # def crack(message, date)
+  #   counter = 00001
+  #   until message.slice(-4..-1)
+  #     decrypt(message, counter.to_s.rjust(5,'0'), date = Offset.new.date) == " end"
+  #     counter += 1
+  #   end
+  # end
+
 end
